@@ -14,7 +14,7 @@ app.get("/Carros", async (request: FastifyRequest, reply: FastifyReply) => {
         const conn = await mysql.createConnection({
             host: "localhost",
             user: 'root',
-            password: "root",
+            password: "",
             database: 'AutoStar',
             port: 3306
         });
@@ -44,7 +44,7 @@ app.post("/Carros", async (request: FastifyRequest, reply: FastifyReply) => {
         const conn = await mysql.createConnection({
             host: "localhost",
             user: 'root',
-            password: "root",
+            password: "",
             database: 'AutoStar',
             port: 3306
         });
