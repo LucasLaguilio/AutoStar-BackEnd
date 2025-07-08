@@ -88,7 +88,7 @@ app.get('/Clientes', async (request: FastifyRequest, reply: FastifyReply) => {
             host: 'localhost',
             user: 'root',
             password: '',
-             database: 'AutoStar',
+            database: 'AutoStar',
             port: 3306
         })
         const resultado = await conn.query('SELECT * FROM Clientes')
@@ -151,6 +151,10 @@ app.post('/Clientes', async (request: FastifyRequest, reply: FastifyReply) => {
                 break;
         }
     }
+})
+
+app.put('/Clientes', async (request: FastifyRequest, reply: FastifyReply) => {
+    
 })
 
 app.listen({ port: 8000 }, (erro, endereco) => {
