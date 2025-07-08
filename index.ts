@@ -154,7 +154,44 @@ app.post('/Clientes', async (request: FastifyRequest, reply: FastifyReply) => {
 })
 
 app.put('/Clientes', async (request: FastifyRequest, reply: FastifyReply) => {
-    
+    const {id,nome,email,telefone} = request.body as any
+    try {
+        const conn = await mysql.createConnection({
+            host: 'localhost',
+            user: 'root',
+            password: '',
+            database: 'AutoStar',
+            port: 3306
+        })
+        const resultado = await conn.query(
+            'UPDATE Clientes SET nome = ?, email = ?, telefone = ? WHERE id = ?',
+            [nome,email,telefone,id]
+        )
+        const [dados, estruturaTabela] = resultado
+        reply.status(200).send({mensagem: 'CLIENTE ATUALIZADO COM SUCESSO!', dados})
+    } catch (erro:any){
+        console.log(erro)
+        reply.status(400).send({mensagem: 'ERRO AO ATUALIZAR CLIENTE'})
+    }
+})
+
+app.delete('/Clientes/:id', async (request: FastifyRequest, reply: FastifyReply) => {
+    const { id } = request.params as any
+    try {
+        const conn = await mysql.createConnection({
+            host: 'localhost',
+            user: 'root',
+            password: '',
+            database: 'AutoStar',
+            port: 3306
+        })
+        const resultado = await conn.query('DELETE FROM Clientes WHERE id = ?', [id])
+        const [dados, estruturaTabela] = resultado
+        reply.status(200).send({mensagem: 'CLIENTE EXCLUÍDO COM SUCESSO', dados })
+    } catch (erro:any) {
+        console.log(erro)
+        reply.status(400).send({mensagem: 'ERRO AO EXCLUIR CLIENTE'})
+    }
 })
 
 app.listen({ port: 8000 }, (erro, endereco) => {
