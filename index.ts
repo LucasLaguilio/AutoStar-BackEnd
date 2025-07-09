@@ -194,7 +194,7 @@ app.delete('/Clientes/:id', async (request: FastifyRequest, reply: FastifyReply)
     }
 })
 
-app.listen({ port: 8001 }, (erro, endereco) => {
+app.listen({ port: 8000 }, (erro, endereco) => {
     if (erro) {
         console.log("ERRO: Fastify não iniciou")
     }
