@@ -30,7 +30,7 @@ app.get("/Carros", async (request: FastifyRequest, reply: FastifyReply) => {
     conn = await mysql.createConnection({
       host: "localhost",
       user: "root",
-      password: "root",
+      password: "",
       database: "AutoStar",
       port: 3306,
     });
@@ -62,7 +62,7 @@ app.post("/Carros", async (request: FastifyRequest, reply: FastifyReply) => {
     conn = await mysql.createConnection({
       host: "localhost",
       user: "root",
-      password: "root",
+      password: "",
       database: "AutoStar",
       port: 3306,
     });
@@ -106,7 +106,7 @@ app.put("/Carros/:id", async (request: FastifyRequest, reply: FastifyReply) => {
     conn = await mysql.createConnection({
       host: "localhost",
       user: "root",
-      password: "root",
+      password: "",
       database: "AutoStar",
       port: 3306,
     });
@@ -140,7 +140,7 @@ app.delete(
       conn = await mysql.createConnection({
         host: "localhost",
         user: "root",
-        password: "root",
+        password: "",
         database: "AutoStar",
         port: 3306,
       });
@@ -188,7 +188,7 @@ app.get("/Clientes", async (request: FastifyRequest, reply: FastifyReply) => {
     conn = await mysql.createConnection({
       host: "localhost",
       user: "root",
-      password: "root",
+      password: "",
       database: "AutoStar",
       port: 3306,
     });
@@ -219,7 +219,7 @@ app.post("/Clientes", async (request: FastifyRequest, reply: FastifyReply) => {
     conn = await mysql.createConnection({
       host: "localhost",
       user: "root",
-      password: "root",
+      password: "",
       database: "AutoStar",
       port: 3306,
     });
@@ -261,7 +261,7 @@ app.put("/Clientes", async (request: FastifyRequest, reply: FastifyReply) => {
     conn = await mysql.createConnection({
       host: "localhost",
       user: "root",
-      password: "root",
+      password: "",
       database: "AutoStar",
       port: 3306,
     });
@@ -295,7 +295,7 @@ app.delete(
       conn = await mysql.createConnection({
         host: "localhost",
         user: "root",
-        password: "root",
+        password: "",
         database: "AutoStar",
         port: 3306,
       });
