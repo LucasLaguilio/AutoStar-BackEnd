@@ -6,7 +6,9 @@
 # Como Rodar nosso projeto na sua máquina:
 
 **Primeiro clone nosso repositório**
-https://github.com/user-attachments/assets/0ec63ffa-3f6a-4304-b11f-2aa08002e1a0
+![Gif](https://github.com/user-attachments/assets/26ff17df-30b2-40c6-af7b-b995655f5cef)
+
+
 
 **Abra seu terminal ou sua IDE de preferência e dê o seguinte comando:**
 > não esqueça de verificar em qual pasta você está (Se fizer por uma IDE, não terá muita importancia.)
@@ -36,6 +38,6 @@ Npm run dev
 
 
 
-By <ins>Lucas & Elifas | 1023B </ins>
+By <ins>Lucas</ins> & <ins>Elifas</ins> | 1023B 
 
 
