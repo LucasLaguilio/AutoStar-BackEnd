@@ -34,7 +34,7 @@ Npm run dev
 ```
 **No terminal da sua IDE.**
 
-**Agora nosso projeto está funcionando e instalando em sua maquina!**
+**Agora nosso projeto está funcionando e instalado em sua máquina!**
 
 
 
